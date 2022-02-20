@@ -6,17 +6,21 @@
     	<meta name="keywords" content="one, two, three">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>Blank Template</title>
+		<title>People Counter</title>
 
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<ul>
-			<li><a href="background-picker/index.html">Background Picker</a></li>
-			<li><a href="people-counter/index.html">People Counter</a></li>	
-		</ul>
+		<section>
+			<h1>People Counter</h1>
+			<h2 id="counterElm">0</h2>
+			<button id="incrementBtn">INCREMENT</button>
+			<button id="saveBtn">SAVE RESULT</button>
+			<p>Previous Results:</p>
+			<p id="resultsElm"></p>
+		</section>
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
