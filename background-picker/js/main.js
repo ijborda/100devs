@@ -11,13 +11,13 @@ function visionWhiteBackground() {
     // Obtain vision classes
     let visions = document.querySelectorAll(".vision");
     // Set all those classes to white
-    for (vision of visions) {
+    for (let vision of visions) {
         vision.style.background = "white";
     }
 }
 // Animation function
 function animateClick(selector) {
-    element =  document.querySelector(selector);
+    let element =  document.querySelector(selector);
     element.style.transform = "scale(1.1)";
     window.setTimeout(function() {element.style.transform = "scale(1.0)";}, 50);
 }

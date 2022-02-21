@@ -6,11 +6,11 @@ document.querySelector("#minusTwo").addEventListener("click", minusTwo);
 document.querySelector("#timesTwo").addEventListener("click", timesTwo);
 
 // Element to change
-result = document.querySelector("#result");
-body = document.querySelector("body");
+let result = document.querySelector("#result");
+let body = document.querySelector("body");
 
 // Initialize counter
-counter = 0;
+let counter = 0;
 
 // Function for setZero 
 function setZero() {
@@ -50,7 +50,7 @@ function timesTwo() {
 
 // Click animation
 function animateClick(id) {
-    element =  document.querySelector(id);
+    let element =  document.querySelector(id);
     element.style.transform = "scale(1.05)";
     window.setTimeout(function() {element.style.transform = "scale(1.0)";}, 50);
 }
