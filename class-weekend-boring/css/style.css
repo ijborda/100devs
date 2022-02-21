@@ -1,0 +1,77 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/* Prevent white space on the right side to appear when screensize is small */
+html, body {
+     width: 100%;
+     height: 100%;
+     margin: 0px;
+     padding: 0px;
+     overflow-x: hidden;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+body {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 10px;
+     background: rgb(230, 224, 216);
+}
+
+/******************************************
+/* DESIGNS
+/*******************************************/
+
+body {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 20px
+}
+button {
+     border: 1px solid rgb(191, 187, 187);
+     padding: 7px 18px;
+     border-radius: 7px;
+}
+button:hover {
+     background: rgb(179, 175, 170);
+}
+p {
+     font-size: 40px;
+}
+input {
+     padding: 10px; 
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

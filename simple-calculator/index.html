@@ -6,37 +6,35 @@
     	<meta name="keywords" content="one, two, three">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>Background Picker</title>
+		<title>Simple Calculator</title>
 
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<h1>My Favorite Genshin Impact Characters</h1>
-		<section class="visionList">
-			<section class="vision pyro">
-				<img src="assets/pyro.png">
+		<h1>Not so great calculator</h1>
+		<section class="inputs">
+			<section class="box" id="setZero">
+				<span>0</span>
 			</section>
-			<section class="vision hydro">
-				<img src="assets/hydro.png">
+			<section class="box" id="plusThree">
+				<span>+3</span>
 			</section>
-			<section class="vision anemo">
-				<img src="assets/anemo.png">
+			<section class="box" id="plusNine">
+				<span>+9</span>
 			</section>
-			<section class="vision electro">
-				<img src="assets/electro.png">
+			<section class="box" id="minusTwo">
+				<span>-2</span>
 			</section>
-			<section class="vision cyro">
-				<img src="assets/cyro.png">
-			</section>
-			<section class="vision geo">
-				<img src="assets/geo.png">
+			<section class="box" id="timesTwo">
+				<span>x2</span>
 			</section>
 		</section>
-		<section class="character">
+		<section class="resultBox">
+			<h2>Result</h2>
+			<p id="result"></p>
 		</section>
-
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>

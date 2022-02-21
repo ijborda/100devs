@@ -1,0 +1,360 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     background: rgb(255,255,255);
+     color: black;
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+     padding: 0 2%;
+     margin-top: 1%;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+main, aside {
+     float: left;
+}
+nav {
+     width: 12%;
+     height: 100vh;
+     position: fixed;
+}
+main {
+     width: 55%;
+     padding: 0 1rem;
+}
+aside {
+     padding-left: 1rem;
+     width: 25%;
+}
+
+body > section {
+     clear: both;
+}
+
+body > main, body > section {
+     padding-left: 14%;
+}
+
+/******************************************
+/* MODULES
+/*******************************************/
+
+/***************
+/* NAVIGATION
+/***************/
+
+/* Remove bullets in list, adjust spacing */
+nav > ul > li {
+     display: inline-block;
+     width: 100%;
+     line-height: 2rem;
+}
+/* Remove left padding in list */
+nav > ul {
+     padding: 0;
+}
+/* Remove link decoratoon */
+nav a {
+     text-decoration: none;
+     color: rgb(132, 132, 132);
+}
+/* Adjust image size */
+nav img {
+     display: inline-block;
+     width: 30%;
+}
+/* Make anchors in-line blocks */
+nav > a {
+     display: inline-block;
+     width: 100%;
+     line-height: .5rem;
+}
+/* Change color of first extra crunch */
+nav > a:first-of-type {
+     color: rgb(234, 170, 68);
+     font-weight: bold;
+     margin: 1.2rem 0;
+}
+/* Allow Join Extra Crunch to be in two lines when necessary */
+nav > a:first-of-type {
+     line-height: 1rem;
+}
+/* Hide hamburger */
+.hamburger {
+     display: none;
+}
+
+/***************
+/* MAIN
+/***************/
+
+/* Make image block level and adjust size */
+main > img {
+     display: block;
+     width: 100%;
+     padding-top: .8rem;
+}
+/* Adjust size, style and spacing of headline title */
+main > h1 {
+     margin: 0;
+     font-weight:900;
+     font-size: 1.7rem;
+}
+/* Adjust size, style and spacing of headline text */
+main > p {
+     color: rgb(181, 181, 181);
+     margin: .5rem 0;
+}
+/* Create class style for authors */
+.author {
+     color: rgb(100, 100, 100);
+     font-size: .7rem;
+     font-weight: bold;
+     width: 100%;
+     display: inline-block;
+}
+
+/***************
+/* ASIDE
+/***************/
+
+/* Remove list bullet */
+aside li {
+     display: block;
+}
+/* Give horizontal lines before sections */
+aside li + li {
+     border-top: 1px solid rgb(234, 234, 234);
+}
+/* Remove list paddings and margins */
+aside ul {
+     padding: 0;
+     margin: 0;
+}
+/* Adjust titles */
+aside h2 {
+     margin: 0;
+     margin-top: .5rem;
+     font-size: 1.2rem;
+     font-weight: bolder;
+}
+/* Customize author style */
+aside .author {
+     padding: .5rem 0;
+}
+
+/***************
+/* SECTION
+/***************/
+
+/* Float elements */
+section > section > div {
+     float: left;
+     width: 33%;
+}
+/* Adjust image size */
+section img {
+     width: 100%;
+}
+/* Give spacing between elements */
+.more-news > section > div:nth-child(2) {
+     padding: 0 2rem;
+}
+/* Give space on top and bottom of sections */
+.more-news {
+     padding-top: 2rem;
+     margin-bottom: 5rem;
+}
+/* Give border on top */
+.more-news > .clearfix {
+     border-top: 1px solid rgb(234, 234, 234);
+     padding-top: 1rem;
+     width: 77%;
+}
+/* Adjust h2 element */
+.more-news h2 {
+     font-size: 1.2rem;
+}
+/* Adjust author and date spacing */
+.more-news > span {
+     display: inline-block;
+     padding-bottom: .5rem;
+}
+/* Adjust time and date color */
+.more-news span + span {
+     color: rgb(181, 181, 181);
+}
+/* Adjust style of texts */
+.more-news p {
+     color: rgb(181, 181, 181);
+     font-size: .8rem;
+}
+ /* Bold author and date styles */
+.more-news > span {
+     font-weight: bold;
+}
+
+/******************************************
+/* MEDIA QUERIES
+/*******************************************/
+
+/* For mid-tablet size */
+@media (min-width: 1250px) and (max-width: 1250px) {
+     /* Reduce amrgin on the right side */
+     main {
+          width: 60%;
+          padding: 0 1rem;
+     }
+     aside {
+          padding-left: 1rem;
+          width: 37%;
+     }
+     .more-news > .clearfix {
+          width: 97%;
+     }
+}
+/* For phone size */
+@media (min-width: 860px) and (max-width: 1249px) {
+     /* Reduce amrgin on the right side */
+     main {
+          width: 60%;
+          padding: 0 1rem;
+     }
+     aside {
+          padding-left: 1rem;
+          width: 37%;
+     }
+     .more-news > .clearfix {
+          width: 97%;
+     }
+     /* Show humburger */
+     .hamburger {
+          display: inline-block;
+     }
+     /* Hide other navs aside from logo */
+     nav > a, nav > ul {
+          display: none;
+     }
+     /* loat nav on top */
+     nav {
+          position:static;
+          height: auto;
+          width: 100%;
+     }
+     /* Make logo smaller */
+     nav > img {
+          width: 7%;
+          text-align: start;
+          margin-bottom: -.5rem;
+     }
+     /* Style hamburger and push to the right */
+     .hamburger {
+          font-size: 1.5rem;
+          color: rgb(108, 195, 112);
+          width: 88%;
+          text-align: end;
+     }
+     /* Remove padidng left */
+     body > main, body > section {
+          padding-left: 2%;
+     }
+     /* Give padding above */
+     main {
+          padding-top: 1rem;
+     }
+}
+/* For smaller phone */
+@media screen and (max-width: 859px) {
+          /* Reduce amrgin on the right side */
+          main {
+               width: 60%;
+               padding: 0 1rem;
+          }
+          aside {
+               padding-left: .5rem;
+               width: 37%;
+          }
+          .more-news > .clearfix {
+               width: 97%;
+          }
+          /* Show humburger */
+          .hamburger {
+               display: inline-block;
+          }
+          /* Hide other navs aside from logo */
+          nav > a, nav > ul {
+               display: none;
+          }
+          /* loat nav on top */
+          nav {
+               position:static;
+               height: auto;
+               width: 100%;
+          }
+          /* Make logo smaller */
+          nav > img {
+               width: 10%;
+               text-align: start;
+               padding-left: .4rem;
+          }
+          /* Style hamburger and push to the right */
+          .hamburger {
+               font-size: 1.5rem;
+               color: rgb(108, 195, 112);
+               width: 87%;
+               text-align: end;
+          }
+          /* Remove padidng left */
+          body > main, body > section {
+               padding-left: 2%;
+          }
+          /* Give padding above */
+          main {
+               padding-top: 1rem;
+          }
+          /* Disable float */
+          main, aside {
+               float: none;
+               width: 100%;
+          }
+          /* Give spacing between headline and aside */
+          aside li:first-child {
+               margin-top: 1rem;
+          }
+          /* Disable float of other news */
+          section > section > div {
+               float: none;
+               width: 100%;
+          }/* Remove spacing between elements */
+          .more-news > section > div:nth-child(2) {
+               padding: 0;
+          }
+          /* Adjust spacings */
+          .more-news h2 {
+               margin-top: 0;
+          }
+     }

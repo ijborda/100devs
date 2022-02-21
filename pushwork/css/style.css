@@ -1,0 +1,798 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/* Prevent white space on the right side to appear when screensize is small */
+html, body {
+     width: 100%;
+     height: 100%;
+     margin: 0px;
+     padding: 0px;
+     overflow-x: hidden;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+/* Give default font family */
+body {
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* Give margins */
+nav, section > div, footer > div {
+     width: 85vw;
+     margin: 0 auto;
+}
+a {
+     /* Remove link styles */
+     text-decoration: none;
+     color: white;
+     /* Prevent going to next line */
+     white-space: nowrap;
+}
+
+/******************************************
+/* MODULES
+/*******************************************/
+
+/*************
+/* REUSABLES
+/*************/
+
+.button {
+     /* Prevent going to next line */
+     white-space: nowrap;
+     /* Set color and background */
+     color: white;
+     background: rgb(60, 65, 78);
+     /* Set paddings */
+     padding: 1rem 2rem;
+     /* Give rounded corners */
+     border-radius: 5%;
+}
+.text {
+     /* Set layout via float */
+     float: left;
+     width: 55%;
+     /* Give space between text and img */
+     padding-right: 10%;
+}
+.img {
+     /* Set layout via float */
+     float: left;
+     width: 45%;
+}
+.help-pic-title {
+     color: rgb(30, 32, 42);
+     margin: 4% 0;
+     font-size: .9rem;
+     text-align: center;
+}
+.help-pic-text {
+     color: rgb(183, 188, 196);
+     text-align: center;
+     margin: 0;
+     margin-bottom: 4%;
+     font-size: 1rem;
+     padding: 0 4% 4% 4%;
+}
+.help-pic-box {
+     border: 1px solid rgb(241, 241, 241);
+     box-shadow: .1rem .6rem 1rem rgb(214, 210, 210);
+     border-radius: 3%;
+}
+.section-title {
+     margin: 0;
+     font-weight: 100;
+     line-height: 2.5rem;
+     color: rgb(68, 78, 88);
+     font-size: 1.8rem;
+     padding-top: .8rem;
+}
+.section-text {
+     line-height: 1.7rem;
+     font-size: 1.1rem;
+     font-weight: 400;
+}
+.section-img {
+     display: inline-block;
+     width: 100%;
+     border-radius: 2%;
+}
+.tag {
+     color: rgb(116, 127, 140);
+}
+.dark {
+     /* Change color */
+     color: white;
+}
+.highlight {
+     color: rgb(23, 25, 37);
+     font-weight: bold;
+     padding-bottom: 1%;
+}
+.hide {
+     visibility: hidden;
+}
+
+/*************
+/* NAV BAR
+/*************/
+
+header {
+     /* Change background color */
+     background: rgb(30, 36, 50);
+     /* Give more space above */
+     padding-top: 1%;
+}
+nav {
+     /* Help logo to align vertically to the nav bar */
+     position: relative;
+}
+nav img {
+     /* Make logo smaller */
+     width: 1.3%;
+     /* Align logo vertically to the nav bar */
+     position: absolute;
+     top: 0; 
+     bottom: 0;
+     margin: auto;
+     /* Give space on the left of image */
+     left: 0;
+}
+nav ul {
+     /* Remove list left padding and margins */
+     padding: 1% 0;
+     margin: 0;
+     /* Push nav list to the right */
+     width: 100%;
+     text-align: end;
+     /* Change color to grayish */
+     color: rgb(138, 135, 145);
+}
+nav li {
+     /* Make list horizontal */
+     display: inline-block;
+     /* Give space between elements */
+     padding-left: 4%;
+     /* Make font smallet */
+     font-size: .7rem;
+}
+
+/*************
+/* INTRODUCTION
+/*************/
+
+.intro {
+     /* Change background color */
+     background: linear-gradient(175deg, rgb(30, 36, 50) 70%, rgb(247, 247, 250) 50%);
+     /* Set color to white */
+     color: white;
+     /* Give top padding */
+     padding-top: 5rem;
+}
+.intro h1 {
+     /* Remove margins */
+     margin: 0;
+     /* Make text thineer */
+     font-weight: 100;
+     /* Increase spcing */
+     line-height: 2.8rem;
+}
+.intro p {
+     /* Increase paragraph size */
+     font-size: 1.3rem;
+     /* Change color */
+     color: rgb(138, 135, 145);
+     /* Increase spcing */
+     line-height: 1.5rem;
+     /* Give padding below */
+     padding-bottom: 2rem;
+}
+.intro ul {
+     /* Remove margin and padding */
+     padding: 0;
+     margin: 0;
+}
+.intro li {
+     /* Make list horizontal */
+     display: inline-block;
+     /* Make font smallet */
+     font-size: .8rem;
+     /* Increase weight */
+     font-weight: bold;
+}
+.intro li:last-child {
+     /* Give space between elements */
+     padding-left: 10%;
+}
+.intro span {
+     /* Set background color of button */
+     background: white;
+     /* Set font style of color */
+     color: rgb(30, 36, 50);
+}
+.intro img {
+     /* Set picture size */
+     width: 100%;
+}
+.intro .sponsor {
+     /* Set layout via float */
+     float: left;
+     width: 100%;
+     /* Push sponsor pic to the right */
+     text-align: end;
+     /* Give padding above */
+     padding-top: 4rem;
+}
+.intro .sponsor img {
+     /* Set sponsor width */
+     width: 70%;
+}
+
+/*************
+/* HELP
+/*************/
+
+.help {
+     /* Change background color */
+     background: rgb(247, 247, 250);
+     /* Set color to white */
+     color: rgb(183, 188, 196);
+     /* Give top padding */
+     padding-top: 5rem;
+}
+.help .text {
+     /* Give padding at the top */
+     padding-top: 4%;
+}
+.help .text p:last-of-type {
+     /* Give padding between p and link */
+     padding-bottom: 5rem;
+}
+.img > section:nth-of-type(even) {
+     /* Layout img */
+     float: left;
+     width: 40%;
+     /* Give space between pictures */
+     margin-left: 5%;
+     margin-bottom: 5%;
+}
+.img > section:nth-of-type(odd) {
+     /* Layout img */
+     float: left;
+     width: 40%;
+     /* Give space between pictures*/
+     margin-right: 5%;
+     margin-bottom: 5%;
+}
+.help img  {
+     /* Size image */
+     display: inline-block;
+     width: 100%;
+     /* Give round top border */
+     border-radius: 3% 3% 0 0 ;
+}
+
+/*************
+/* WE ARE
+/*************/
+
+.we-are {
+     /* Change background color */
+     background: rgb(247, 247, 250);
+     /* Set color to white */
+     color: rgb(183, 188, 196);
+     /* Give top and padding */
+     padding: 5rem 0;
+}
+.we-are .text {
+     /* Give space between text and img */
+     padding-left: 10%;
+     padding-right: 0;
+}
+
+/*************
+/* WORK
+/*************/
+
+.work {
+     /* Change background color */
+     background: rgb(247, 247, 250);
+     /* Set color to white */
+     color: rgb(183, 188, 196);
+     /* Give top and padding */
+     padding: 5rem 0;
+}
+.work .text {
+     /* Give space between text and img */
+     padding-left: 10%;
+     padding-right: 0;
+}
+.work dd {
+     /* Remove description margin */
+     margin: 0;
+}
+.work dt {
+     /* Give space on top of description titles */
+     margin-top: 2.5rem;
+}
+.work > div > a {
+     /* Adjust top padding */
+     display: inline-block;
+     padding-top: 5rem;
+}
+.work > div:last-child, .work > div:first-of-type {
+     /* Center button and top heading */
+     text-align: center;
+}
+.work > div > p {
+     /* Give left and right padding */
+     padding: 0 25%;
+     /* Give bottom padding */
+     padding-bottom: 3rem;
+}
+
+/*************
+/* FEATURES
+/*************/
+
+.features {
+     /* Change background color */
+     background: linear-gradient(354deg, rgb(30, 36, 50) 72%, rgb(247, 247, 250) 50%);
+     /* Set color to white */
+     color: rgb(183, 188, 196);
+     /* Give top and bottom padding */
+     padding: 5rem 0;
+}
+.feature-title {
+     /* Make text smaller */
+     font-size: .9rem;
+     /* Redice spacing */
+     margin-top: 4%;
+     margin-bottom: 0;
+}
+.features > div:first-of-type {
+     /* Give padding between title and content */
+     padding-bottom: 7rem;
+}
+.features > div > .section-title {
+     /* Make size larger */
+     font-size: 2.2rem;
+}
+.feature-box {
+     /* Give size and layout */
+     float: left;
+     width: 30%;
+     /* Give slightly rounded border */
+     border: 1px solid rgb(30, 36, 50); 
+     border-radius: 3%;
+     /* Give inner padding */
+     padding: 2%;
+     /* Set background */
+     background: rgb(247, 247, 250);
+     margin-bottom: 3%;
+}
+.feature-box + .feature-box {
+     /* Give spacing between */
+     margin-left: 3%;
+}
+.feature-text {
+     /* Remove margin */
+     margin: 0;
+     /* Make text smaller */
+     font-size: 1rem;
+}
+.feature-icon {
+     /* Make icon bluish */
+     color: rgb(30, 36, 50);
+     /* Make icon larger */
+     font-size: 2rem;
+}
+.feature-single {
+     /* Center single content */
+     visibility: hidden;
+} 
+.feature-box > i.feature-single + h3 {
+     /* Center single content */
+     text-align: center;
+}
+
+
+/*************
+/* STANDPOINT
+/*************/
+
+.standpoint {
+     /* Change background color */
+     background: rgb(247, 247, 250);
+     /* Set color to white */
+     color: rgb(183, 188, 196);
+     /* Give top and bottom padding */
+     padding: 5rem 0;
+}
+.standpoint .text {
+     /* Give space between text and img */
+     padding-left: 10%;
+     padding-right: 0;
+}
+
+/*************
+/* REVIEW
+/*************/
+
+.review {
+     /* Center everything */
+     text-align: center;
+     /* Give top and bottom padding */
+     padding: 5rem 0;
+     /* Give background */
+     background: white;
+}
+.review p {
+     /* Make font larger */
+     font-size: 1.7rem;
+     /* Change color */
+     color: rgb(87, 104, 93);
+     /* Reduce weight */
+     font-weight: 100;
+     /* Increase spacing */
+     line-height: 3rem;
+     /* Give left and right padding */
+     padding: 0 10%;
+}
+.profile {
+     /* Center profile */
+     width: 20%;
+     margin: 0 auto;
+}
+.profile .photo {
+     /* Align profile picture */
+     float: left;
+     width: 25%;
+}
+.profile .photo img {
+     /* Align profile name */
+     width: 100%;
+}
+.profile .name {
+     float: left;
+     width: 75%;
+     /* Flush left */
+     text-align: start;
+     /* Align vetically */
+     padding-top: 5%;
+     padding-left: 3%;
+}
+.profile .name *  {
+     /* Make name and position be in different lines */
+     display: block;
+}
+.profile .name span:last-child {
+     /* Change position color */
+     color: rgb(183, 188, 196);
+}
+.profile .name span {
+     /* Prevent going to next line */
+     white-space: nowrap;
+}
+
+/*************
+/* ORDER
+/*************/
+
+.order {
+     /* Give top and bottom padding */
+     padding: 5rem 0;
+     /* Give background */
+     background: rgb(30, 36, 50);
+}
+.order > div > section {
+     /* Set the lasyout */
+     float: left;
+     width: 50%;
+}
+.order h2 {
+     /* Set color of section title */
+     color: rgb(247, 247, 250);
+}
+.order ul {
+     /* Remove ul margin and padding */
+     margin: 0;
+     padding: 0;
+}
+.order li {
+     /* Make list horizontal */
+     display: inline-block;
+}
+.order li:last-of-type > a{
+     /* Change background and color of buttons */
+     background: rgb(247, 247, 250);
+     color:  rgb(60, 65, 78);
+     /* Give spacing between two */
+     margin-left: 25%;
+}
+
+/*************
+/* FOOTER
+/*************/
+
+footer {
+     /* Give top and bottom padding */
+     padding: 5rem 0;  
+}
+footer > div > section {
+     /* Layout */
+     float: left;
+     width: 16%;
+}
+footer > div > section:first-of-type {
+     width: 20%;
+}
+footer h6 {
+     /* Make font larger */
+     font-size: .9rem;
+     margin: 0;
+}
+footer ul {
+     /* Remove list padding and margin */
+     padding: 0;
+     margin: 0;
+     /* Remove dots */
+     list-style-type: none;
+}
+footer li, footer p, footer a {
+     /* Make font smaller */
+     font-size: .9rem;
+     /* Change color */
+     color: rgb(183, 188, 196);
+     padding: 8% 10% 0 0;
+}
+section > a {
+     /* Change color of socials */
+     color: rgb(88, 102, 128);
+     /* Push socials below */
+     display: inline-block;
+     margin-top: 1rem;
+}
+footer p {
+     margin-top: 0;
+     padding-top: 8%;
+}
+/******************************************
+/* MEDIA QUERIES
+/*******************************************/
+
+@media screen and (max-width: 1400px){
+     .feature-section:nth-of-type(even) {
+          /* Reduce padding on last batch */
+          margin-left: 0;
+     }
+     .img > section:nth-of-type(even) {
+          /* Layout img */
+          width: 45%;
+          /* Give space between pictures */
+          margin-left: 2.5%;
+     }
+     .img > section:nth-of-type(odd) {
+          /* Layout img */
+          width: 45%;
+          /* Give space between pictures*/
+          margin-right: 2.5%;
+     }
+}
+
+@media screen and (max-width: 1250px){
+     /* Change layout of feature-box */
+     .feature-box + .feature-box {
+          margin-left: 0;
+     }
+     .feature-box:nth-of-type(even) {
+          margin-left: 3%;
+          margin-right: 10%;
+     }
+     .feature-box:nth-of-type(odd) {
+          margin-left: 10%;
+     }
+     .feature-box {
+          width: 40%;
+     }
+     /* Change li padding in intro */
+     nav li {
+          /* Make list horizontal */
+          display: inline-block;
+          /* Give space between elements */
+          padding-left: 2%;
+          /* Make font smallet */
+          font-size: .7rem;
+     }
+}
+
+@media screen and (max-width: 1230px){
+     /* Remove float */
+     .help .img, .help .text {
+          width: 100%;
+     }
+     .help a {
+          padding-top: 0;
+          padding-bottom: 4rem;
+     }
+     .help .text p:last-of-type {
+          padding: 0;
+     }
+     .help .img > section {
+          width: 23%;
+     }
+     .img > section:nth-of-type(odd) {
+          /* Give space between pictures*/
+          margin-right: 0;
+     }
+     .img > section:nth-of-type(even) {
+          /* Give space between pictures */
+          margin-left: 0;
+     }
+     .img > section.help-pic-box + section {
+          margin-left: 1rem;
+     }
+     /* Change background */
+     .intro {
+          /* Change background color */
+          background: linear-gradient(175deg, rgb(30, 36, 50) 80%, rgb(247, 247, 250) 50%);
+     }
+}
+@media screen and (max-width: 1120px) {
+     .intro li:last-child {
+          /* Give space between elements */
+          padding-left: 5%;
+     }
+}
+
+@media screen and (max-width: 1060px) {
+     /* Reduce margin of feature box */
+     .feature-box:nth-of-type(even) {
+          margin-left: 3%;
+          margin-right: 5%;
+     }
+     .feature-box:nth-of-type(odd) {
+          margin-left: 5%;
+     }
+     /* Reduce margin of help pictures */
+     .help .img > section {
+          width: 47.5%;
+     }
+     .help .img {
+          padding: 0 20%;
+     }
+     /* Readjust margin */
+     .img > section.help-pic-box:nth-of-type(even) {
+          margin-left: 5%;
+     }
+     .img > section.help-pic-box + section {
+          margin-left: 0;
+     }
+     /* Give margins */
+     nav, section > div, footer > div {
+          width: 93vw;
+     }
+     .text {
+     /* Give space between text and img */
+          padding-right: 3%;
+     }
+     .we-are .text, .work .text, .standpoint .text {
+          /* Give space between text and img */
+          padding-left: 3%;
+          padding-right: 0;
+     }
+}
+@media screen and (max-width: 900px) {
+     .feature-box:nth-of-type(even) {
+          margin-right: 0;
+     }
+     .feature-box {
+          width: 45%;
+     }
+} 
+
+@media screen and (max-width: 800px) {
+     /* Make font styles smaller */
+     html {
+          font-size: 80%;
+     }
+     /* Disable floats */
+     .text {
+          width: 100%;
+     }
+     .img {
+          width: 100%;
+          padding: 10%;
+     }
+     /* Reduce margin of feature box */
+     .help .img {
+          padding: 0 10%;
+     }
+     .work .img {
+          padding-top: 0;
+     }
+     .profile {
+          /* Center profile */
+          width: 40%;
+          margin: 0 auto;
+     }
+     /* Change order */
+     .order > div > section {
+          /* Set the lasyout */
+          width: 100%;
+     }
+     .order > div > section:last-child {
+          /* Set the lasyout */
+          padding-top: 5%;
+     }
+     /* Change footer */
+     footer > div > section, footer > div > section:first-of-type {
+          /* Layout */
+          width: 100%;
+     }
+     footer {
+          text-align: center;
+     }
+     footer a, footer li, footer p {
+          padding: 0;
+     }
+     footer h6 {
+          margin-top: 3%;
+     }
+     footer .hide {
+          margin-top: 0;
+          display: none;
+     }
+} 
+
+@media screen and (max-width: 490px) {
+     .help .img {
+          padding: 0;
+     }
+     .work > div:first-child p.section-text {
+          padding-left: 5%;
+          padding-right: 5%;
+     }
+     section.features section.feature-box {
+          width: 60%;
+          margin-left: 20%;
+     }
+     .features {
+          /* Change background color */
+          background: linear-gradient(354deg, rgb(30, 36, 50) 82%, rgb(247, 247, 250) 50%);
+     }
+     footer h6 {
+          margin-top: 2rem;
+     }
+     .review p {
+          font-size: 1.3rem;
+          line-height: 2rem;
+          padding: 0 10%;
+     }
+     section.feature-section section.feature-box {
+          margin-left: 0;
+     }
+     section.features section.feature-box {
+          width: 80%;
+          margin-left: 10%;
+          padding: 5%;
+     }
+}

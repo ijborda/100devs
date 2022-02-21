@@ -1,0 +1,271 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+/* Set default background color, and font styles */
+html {
+     background: rgb(246, 249, 252);
+     color: rgb(54, 69, 88);
+     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/**************
+/* NAV
+/**************/
+
+/* Set backgrund and color of header, give also padding */
+header {
+     background: rgb(246, 249, 252);
+     color: rgb(54, 69, 88);
+     padding: 10px 0;
+}
+/* Set margin and height of nav */
+nav {
+     width: 95vw;
+     margin: 0 auto;
+     height: 30px;
+}
+/* Float three main nav divisions */
+.hamburger, .nav-left, .nav-center, .nav-right {
+     float: left;
+     line-height: 30px;
+}
+/* Customive the nav on the left */
+.nav-left {
+     width: 20%;
+     font-weight: bold;
+     font-size: 1.3rem;
+}
+/* Customize the nav on center */
+.nav-center {
+     width: 60%;
+     text-align: center;
+}
+/* Remove padding and bullters of list */
+.nav-center ul {
+     list-style-type: none;
+     padding: 0;
+     margin: 0;
+}
+/* Remove styles of links */
+.nav-center a {
+     text-decoration: none;
+     color: rgb(54, 69, 88);
+}
+/* Give space between lists */
+.nav-center li {
+     display: inline-block;
+     margin: 0 5%;
+}
+/* Customize nav on right */
+.nav-right {
+     width: 20%;
+     text-align: end;
+}
+/* Customize button */
+.button {
+     background: rgb(54, 69, 88);
+     color: white;
+     border: none;
+     padding: 5px 15px;
+}
+/* Hide hamburger for now */
+.hamburger {
+     height: 1px;
+     display: none;
+}
+
+/**************
+/* INTRO
+/**************/
+
+/* Set background and paddings for the intro section */
+section.intro {
+     background: rgb(246, 249, 252);
+     color: rgb(54, 69, 88);
+     padding-left: 5%;
+     padding-top: 5%;
+}
+/* Float elements */
+.intro-content, .intro-img {
+     float: left;
+     width: 50%;
+}
+/* Give distance between image and text*/
+.intro-content {
+     padding-right: 15vw;
+}
+/* Customize tagline */
+.intro-content > span {
+     color: rgb(159, 173, 186);
+     font-size: .9rem;
+}
+/* Make h1 larger */
+.intro-content > h1 {
+     font-size: 3rem;
+}
+/* Customize search bar */
+.intro-content input {
+     color: rgb(159, 173, 186);
+     background: rgb(226, 233, 239);
+     border: none;
+     font-size: .9rem;
+     padding: 5px;
+     width: 60%;
+}
+/* Customize search button */
+.intro-content .button {
+     font-size: .9rem;
+}
+/* Customize paragraph */
+.intro-content > p {
+     font-size: 1.3rem;
+}
+/* Adjust image size */
+.intro-img > img {
+     width: 100%;
+}
+
+/**************
+/* SECTIONS
+/**************/
+
+/* Give space between two main sections and below */
+section.features {
+     padding: 5%;
+     margin-bottom: 15%;
+}
+/* Float elements */
+section.features > section {
+     width: 25%;
+     float: left;
+}
+/* Remove link styles */
+section.features a {
+     text-decoration: none;
+     color: rgb(54, 69, 88);
+}
+/* Bold title and links */
+section.features h2, .features a {
+    font-weight: bold;
+}
+/* Give spaces between sections */
+.features > section + section {
+     padding-left: 2%;
+}
+/* Adjust image sizes */
+.features img {
+     height: 2rem;
+}
+/* Adjust h2 size */
+.features h2 {
+     margin: .5rem 0;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+/* For midsize desktop */
+@media (min-width: 700px) and (max-width: 1200px) {
+     .intro-content {
+         padding-right: 2%;
+     }
+     section.features > section {
+          width: 50%;
+          float: left;
+     }
+     .features > section + section {
+          padding-left: 0;
+     }
+     .features > section:nth-child(2n) {
+          padding-left: 2%;
+     }
+
+     .features > section {
+          padding-bottom: 2.5rem;
+     }
+     
+}
+
+/* For phones */
+@media screen and (max-width: 699px) {
+     .intro-content, .intro-img {
+          float: none;
+          width: 100%;
+     }
+     section.intro {
+          margin: 0;
+          padding: 0;
+     }
+     .intro-content {
+          padding-right: 0;
+          width: 90vw;
+          margin: 0 auto;
+      }
+     .intro-content input, .intro-content .button {
+          padding: 1rem 0;
+          width: 100%;
+     }
+     .intro-content input {
+          padding-left: 5%;
+     }
+     .intro-content .button {
+          margin-top: 1rem;
+          width: 100%;
+     }
+     .nav-center, .nav-right {
+          display: none;
+     }
+     .hamburger {
+          display: inline-block;
+     }
+     .nav-left{
+          padding-left: 40vw;
+     }
+     h1 {
+          margin: 2% 0;
+          margin-bottom: 5%;
+     }
+     .intro-content span {
+          display: inline-block;
+          margin: 3% 0;
+     }
+     section.features > section {
+          width: 100%;
+          float: left;
+     }
+     .features > section + section {
+          padding-left: 0;
+     }
+     .features > section {
+          padding-left: 0;
+     }
+     .features > section {
+          padding-bottom: 2.5rem;
+     }     
+}

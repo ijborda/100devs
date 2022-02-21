@@ -1,0 +1,326 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+/* Remove link style */
+a {
+     text-decoration: none;
+}
+
+/* Set sitewide styles */
+body {
+     /* Set background color */
+     background: rgb(255, 255, 255);
+     /* Set font family */
+     font-family: 'Lato', sans-serif;
+}
+
+/* Set left and right margins */
+nav {
+     padding: 0 10%;
+}
+main {
+     padding: 0 15%;
+}
+
+/* Hide hamburger */
+.hamburger {
+     display: none;
+}
+
+/******************************************
+/* MODULES
+/*******************************************/
+
+/************
+/* NAV BAR
+/************/
+
+/*** Whole nav bar ***/
+
+/* Float elements to left, center, and right */
+nav div {
+     float: left;
+     width: 33.3333%;
+}
+/* Settings applicable to whole nav bar */
+nav * {
+     /* Make everything in nav inline-block */
+     display: inline-block;
+     /* Set color to blue */
+     color: rgb(31, 85, 233);
+     /* Bold font */
+     font-weight: bold;
+}
+/* Vertically align elements */
+
+/* Give header top and bottom margin */
+header {
+     padding: 1% 0;
+     /* Give gray line in the bottom of header */
+     border-bottom: 2px solid rgb(233, 233, 233);
+}
+/* Give hader bottom border */
+
+/*** Left nav bar ***/
+
+/* Set placeholder color */
+::placeholder {
+     color: rgb(31, 85, 233);
+}
+/* Customize search bar */
+.nav-left input {
+     /* Set background color */
+     background: rgb(241, 241, 242);
+     /* Remove border */
+     border: none;
+     /* Increase padding */
+     padding: 5% 0;
+     padding-left: 5%;
+}
+/* Put magnifying class inside search */
+.nav-left > form > i {
+     background: transparent;
+     margin-left: -15%;
+     /* Change color */
+     color: rgb(136, 140, 146);
+}
+/* Push courses below a bit to align with other nav links */
+.nav-left > .courses {
+     margin-top: 2%;
+}
+
+/*** Center nav bar ***/
+
+/* Center logo */
+.nav-center {
+     text-align: center;
+}
+/* Adjust logo size */
+.nav-center img {
+     width: 40%;
+}
+
+/*** Right nav bar ***/
+
+/* Push links to the right */
+.nav-right {
+     text-align: end;
+     /* Push right links below a bit to align with other nav links */
+     margin-top: .7%;
+}
+/* Remove list padding and margin */
+.nav-right ul {
+     padding: 0;
+     margin: 0;
+     /* Adjust width to occupy alotted 33.3333% */
+     width: 100%;
+}
+/* Give links spacings in between */
+.nav-right li+li {
+     padding-left: 8%;
+}
+
+/************
+/* SECTIONS
+/************/
+
+/*** Whole section ***/
+/* Float left and right sectiom */
+main > section {
+     float: left;
+     width: 50%;
+}
+/* Give space between section and nav */
+main {
+     padding-top: 5%;
+     /* Give some space below too */
+     margin-bottom: 10rem;
+}
+
+/*** Left section ***/
+
+/* Adjust image size */
+.image img {
+     width: 100%;
+}
+
+/*** Right section ***/
+
+/* Adjust h1 */
+.intro h1 {
+     /* Make text bigger */
+     font-size: 4rem;
+     /* Remove bottom border */
+     margin-bottom: 0;
+}
+/* Change underline width */
+.intro img {
+     width: 65%;
+}
+/* Give space between button-links */
+.intro a + a {
+     margin-left: 1%;
+}
+/* Customize p */
+.intro p {
+     /* Adjust font size and spacing */
+     font-size: 1.1rem;
+     line-height: 1.7rem;
+     /* Give margin below paragraph */
+     margin-bottom: 3rem;
+}
+/* Customize button-links */
+.button-link {
+     background: rgb(62, 100, 234);
+     color: white;
+     padding: 1.5% 3%;
+     border-radius: 8%;
+}
+
+/******************************************
+/* MEDIA QUERIES
+/*******************************************/
+
+/* For wide tablet sizes */
+@media (min-width: 1000px) and (max-width: 1150px) {
+    /* Change side margins */
+     nav {
+          padding: 0 5%;
+     }
+     main {
+          padding: 0 10%;
+          padding-top: 5%;
+     }
+}
+
+/* For tablet sizes */
+@media (min-width: 450px) and (max-width: 999px) {
+     /* Change side margins */
+     nav {
+          padding: 0 5%;
+     }
+     main {
+          padding: 0 10%;
+          padding-top: 5%;
+     }
+     /* Disable float */
+     main > section {
+         float: none;
+         width: 100%;
+     }
+     /* Make image smaller */
+     .image img {
+          width: 70%;
+     }
+     /* Center all elements */
+     .intro, .image {
+          text-align: center;
+     }
+     /* Hide other nav elements and change to hamburger */
+     .nav-left, .nav-right {
+          display: none;
+     }
+     .hamburger {
+          display: inline-block;
+     }
+     /* Adjust spacing between khan academy logo and hamburger */
+     .nav-center, .hamburger {
+          width: 50%;
+     }
+     .nav-center {
+          text-align: start;
+     }
+     .hamburger {
+          text-align: end;
+          font-size: 2rem;
+     }
+     /* Make logo bigger */
+     .nav-center img {
+          width: 70%;
+     }
+     /* Make h1 smaller */
+     .intro h1 {
+          font-size: 3rem;
+     }
+ }
+
+ /* For cellphones */
+ @media screen and (max-width: 449px) {
+     /* Change margins */
+     nav {
+          padding: 0 5%;
+     }
+     main {
+          padding: 0 10%;
+          padding-top: 5%;
+     }
+     /* Disable float */
+     main > section {
+         float: none;
+         width: 100%;
+     }
+     /* Make image smaller */
+     .image img {
+          width: 70%;
+     }
+     /* Center all elements */
+     .intro, .image {
+          text-align: center;
+     }
+     /* Hide other nav elements and change to hamburger */
+     .nav-left, .nav-right {
+          display: none;
+     }
+     .hamburger {
+          display: inline-block;
+     }
+     /* Adjust spacing between khan academy logo and hamburger */
+     .nav-center, .hamburger {
+          width: 50%;
+     }
+     .nav-center {
+          text-align: start;
+     }
+     .hamburger {
+          text-align: end;
+          font-size: 1.5rem;
+     }      
+     /* Make h1 smaller */
+     .intro h1 {
+          font-size: 2rem;
+     }
+     /* Make logo bigger */
+     .nav-center img {
+          width: 100%;
+     }
+     /* Remove spacing between button links */
+     .intro a + a {
+          margin-left: auto;
+     }
+     /* Set one button link per row */
+     .button-link {
+          display: block;
+          width: 50%;
+          margin: 2% auto;
+     }
+ }

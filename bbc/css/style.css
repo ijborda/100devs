@@ -1,0 +1,648 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+/* Set font family of the whole website */
+body {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/******************************************
+/* MODULES
+/*******************************************/
+
+/****************
+/* HEADER
+/****************/
+
+/*** Whole nav bar ***/
+
+/* Make everything inline-block */
+nav * {
+     display: inline-block;
+}
+/* Set background color and font color */
+header {
+     background: black;
+     color: white;
+}
+/* Set nav bar margin and center elements */
+nav {
+     /* Set margin */
+     width: 85vw;
+     margin: 0 auto;
+     /* Center elements */
+     text-align: center;
+     /* Make text smaller */
+     font-size: .8rem;
+     /* Give text some weight */
+     font-weight: bold;
+}
+/* Float img, ul, and form */
+nav img, nav ul, nav form {
+     float: left
+}
+/* Give width for each component */
+nav img {
+     width: 9%
+}
+nav ul {
+     width: 77%;
+}
+nav form {
+     width: 14%;
+     text-align: start;
+}
+/* Remove link styles */
+nav a {
+     text-decoration: none;
+     color: white;
+}
+/* Remove list padding and margin */
+nav ul {
+     padding: 0;
+     margin: 0;
+}
+/* Give spacing between elements and give border*/
+nav li {
+     /* Give spacing between elements */
+     padding: 1.5% 1.8%;
+     /* Give gray border */
+     border-left: 1px solid rgb(83, 83, 83);
+     border-right: 1px solid rgb(83, 83, 83);
+}
+/* Adjust spacing on signin */
+.signin {
+     padding-right: 10%;
+}
+.signin a {
+     padding-left: 5px;
+}
+/* Adjust spacing on more */
+.more a{
+     padding-right: 5px;
+}
+.more {
+     padding-right: 10%;
+}
+/* Customize search bar */
+::placeholder {
+     /* Change placeholder color */
+     color: black;
+     font-weight: bold;
+}
+/* Increase width of search bar */
+nav input {
+     margin-top: 5.5%;
+     width: 80%;
+}
+/* Move magnifying glass inside search bar */
+form i {
+     color: black;
+     margin-left: -15%;
+}
+/* Give space below */
+body {
+     margin-bottom: 10%;
+}
+
+
+/****************
+/* 1ST SECTION
+/****************/
+
+main h2 {
+     margin-bottom: 1%;
+     margin-top: 2%;
+     font-size: 1.3rem;
+     font-weight: 700;
+     color: rgb(60, 60, 60);
+}
+/* Give margin */
+main {
+     width: 85vw;
+     color: white;
+     margin: 0 auto;
+}
+/*** Layout float ***/
+main > section {
+     width: 49.5%;
+     float: left;
+}
+/* Give frontpage background and spacing*/
+.frontpage {
+     background: url(../assets/israel-uae.jpg);
+     background-size: cover;
+     height: 20.4rem;
+     margin-right: 1%;
+}
+.background {
+     box-shadow: inset 0px -40px 100px black;
+}
+/* Give h2 a color of black */
+main > h2 {
+     color: black;
+}
+/* Align text within section */
+.background {
+     position: relative;
+}
+.text {
+     position: absolute;
+     bottom: 0;
+     padding: 3%;
+     width: 100%;
+}
+/* Adjust h1 size and margin */
+.frontpage h1 {
+     margin: 0;
+     font-weight: bold;
+     font-size: 2rem;
+}
+/* Adjust p size and margin */
+.frontpage p {
+     margin: 1.5% 0;
+     font-size: 1rem;
+     padding-right: 10%;
+     color: rgb(182, 182, 182);
+}
+/* Give span a border and make it uppercase */
+.tag {
+     display: inline-block;
+     border-left: 2px solid red;
+     line-height: 80%;
+     padding-left: 1%;
+     font-size: .8rem;
+     color: rgb(182, 182, 182);
+     text-transform: uppercase;
+     font-weight: 600;
+}
+
+/*** Left section ***/
+
+/* Left section layout */
+.highlight {
+     height: 20rem;
+     font-weight: 100;
+}
+.highlight > section {
+     float: left;
+     width: 49%;
+     height: 10rem;
+}
+/* Give background */
+.highlight .canada {
+     background: url('../assets/canada-us.jpg');
+     background-size: cover;
+}
+.highlight .health {
+     background: url('../assets/vaccinate.jpg');
+     background-size: cover;
+}
+.highlight .worklife {
+     background: url('../assets/productivity.jpg');
+     background-size: cover;
+}
+.highlight .culture {
+     background: url('../assets/music.jpg');
+     background-size: cover;
+}
+/* Give margins between section */
+.highlight .canada, .highlight .health {
+     margin-bottom: 1%;
+}
+.highlight .canada, .highlight .worklife {
+     margin-right: 2%;
+}
+/* Adjust spacing of text */
+.highlight h3 {
+     margin: 0;
+     font-weight: bold;
+     font-size: 1rem;
+     margin-bottom: 2%;
+     padding-right: 5%;
+}
+
+/****************
+/* 2ND SECTION
+/****************/
+
+/* Modify news section */
+.news h2 {
+     border-left: 4px solid red;
+     line-height: 80%;
+     padding-left: .3%;
+     margin-bottom: 1%;
+     margin-top: 3%;
+     font-size: 1.3rem;
+     font-weight: 700;
+     color: rgb(60, 60, 60);
+}
+/* Give margin */
+.news {
+     width: 85vw;
+     color: black;
+     margin: 0 auto;
+}
+/* Layout - float */
+.news > section {
+     float: left;
+     width: 32.7778%;
+     height: 12rem;
+}
+/* Give margin between sections */
+.news > section + section {
+     margin-left: .8333%;
+}
+/* Give backgrounds */
+.biden {
+     background: url(../assets/election.jpg);
+     background-size: cover;
+}
+
+.women {
+     background: url(../assets/women.jpg);
+     background-size: cover;
+}
+
+.trump {
+     background: url(../assets/trump.jpg);
+     background-size: cover;
+}
+/* Remove shadow */
+.news .background {
+     box-shadow: none;
+     position: relative;
+}
+/* Push text below */
+.news .text {
+     padding: 0;
+     position: absolute;
+     bottom: -7.5rem;
+}
+/* Customize p */
+.news p {
+     font-size: .8rem;
+     padding: 2% 0;
+}
+/* Remove margins */
+.news p, h3 {
+     margin: 0;
+}
+/* Make tags gray */
+.news .tag {
+     color: rgb(148, 148, 148);
+}
+/* Give space in the bottom */
+.news {
+     margin-bottom: 15%;
+}
+
+/******************************************
+/* MEDIA QUERIES
+/*******************************************/
+
+@media (min-width: 1070px) and (max-width: 1380px) {
+     /* Remove signin padding */
+     .signin {
+          padding-right: 1.8%;
+     }
+     /* Remove more padding */
+     .more {
+          padding-right: 1.8%;
+     }
+     /* Remove margin */
+     /* Remove margin */
+     nav, main, .news {
+          width: 95vw;
+     }
+}
+
+@media (min-width: 918px) and (max-width: 1070px) {
+     /* Remove signin padding */
+     .signin {
+          padding-right: 1.8%;
+     }
+     /* Remove more padding */
+     .more {
+          padding-right: 1.8%;
+     }
+     /* Remove margin */
+     nav, main, .news {
+          width: 95vw;
+     }
+}
+
+@media (min-width: 690px) and (max-width: 918px) {
+     /* Remove signin padding */
+     .signin {
+          padding-right: 1.8%;
+     }
+     /* Remove more padding */
+     .more {
+          padding-right: 1.8%;
+     }
+     /* Remove margin */
+     nav, main, .news {
+          width: 95vw;
+     }
+     /* Remove sign in word */
+     ul > li > i + a {
+          display: none;
+     }
+     /* Retain only magnifying glass */
+     form > input {
+          display: none;
+     }
+     /* Recolor magnifying glass */
+     form > i {
+          color: white;
+          margin-top: .6rem;
+          margin-left: 0;
+     }
+     /* Adjust width of nav elements */
+     nav form {
+          width: 1%
+     }
+     nav ul {
+          width: 90%;
+     }
+     /* Disable floats */
+     main > section {
+          width: 100%;
+          float: none;
+     }
+     /* Give margin between sections */
+     main > section:first-of-type {
+          margin-bottom: 1rem;
+     }
+     /* Increase height of additional news */
+     main > section:last-of-type > section {
+          height: 12rem;
+     }
+     /* Make titles bigger */
+     .highlight h3 {
+          font-size: 1.4rem;
+     }
+     /* Increase shadow */
+     .background {
+          box-shadow: inset 0px -70px 150px black;
+     }
+     /* Increase spacing in news */
+     .news .text {
+          bottom: -8.5rem;
+     }
+     
+}
+
+@media (min-width: 500px) and (max-width: 690px) {
+     /* Adjust logo size */
+     nav img {
+          width: 12%
+     }
+     /* Remove signin padding */
+     .signin {
+          padding-right: 1.8%;
+     }
+     /* Remove more padding */
+     .more {
+          padding-right: 1.8%;
+     }
+     /* Remove margin */
+     nav, main, .news {
+          width: 95vw;
+     }
+     /* Remove sign in word */
+     ul > li > i + a {
+          display: none;
+     }
+     /* Retain only magnifying glass */
+     form > input {
+          display: none;
+     }
+     /* Recolor magnifying glass */
+     form > i {
+          color: white;
+          margin-top: .6rem;
+          margin-left: 0;
+     }
+     /* Adjust width of nav elements */
+     nav form {
+          width: 1%
+     }
+     nav ul {
+          width: 87%;
+     }
+     nav img {
+          width: 12%;
+     }
+     /* Hide last few elements */
+     nav > ul > li:nth-last-child(2) {
+          display: none;
+     }
+     nav > ul > li:nth-last-child(3) {
+          display: none;
+     }
+     /* Disable floats */
+     main > section {
+          width: 100%;
+          float: none;
+     }
+     /* Give margin between sections */
+     main > section:first-of-type {
+          margin-bottom: 1rem;
+     }
+     /* Increase height of additional news */
+     main > section:last-of-type > section {
+          height: 12rem;
+     }
+     /* Make titles bigger */
+     .highlight h3 {
+          font-size: 1.4rem;
+     }
+     /* Increase shadow */
+     .background {
+          box-shadow: inset 0px -70px 150px black;
+     }
+     /* Remove float in second */
+     main > section:last-child {
+          float: none;
+     }
+     main > section:last-child > section {
+          width: 100%;
+          height: 15rem;
+     }
+     main > section:last-child > section:last-child {
+          margin-top: .5rem;
+     }
+     /* Remove float in last section */
+     .news > section {
+          float: none;
+          width: 100%;
+     }
+     /* Remove background */
+     .biden, .women, .trump {
+          background: none;
+     }
+     .news .background, .news .text {
+          position: static;
+     }
+     .news > section {
+          height: auto;
+     }
+     /* Adjust spacings */
+     .news h2 {
+          margin-bottom: 1rem;
+     }
+     .news > section + section {
+          margin-left: 0%;
+          margin-top: 2rem;
+     }
+     /* Customize p */
+     .news p {
+          font-size: .8rem;
+          padding: 1% 0;
+     }
+}
+
+@media screen and (max-width: 500px) {
+     /* Adjust logo size */
+     nav img {
+          width: 12%
+     }
+     /* Remove signin padding */
+     .signin {
+          padding-right: 1.8%;
+     }
+     /* Remove more padding */
+     .more {
+          padding-right: 1.8%;
+     }
+     /* Remove margin */
+     nav, main, .news {
+          width: 95vw;
+     }
+     /* Remove sign in word */
+     ul > li > i + a {
+          display: none;
+     }
+     /* Retain only magnifying glass */
+     form > input {
+          display: none;
+     }
+     /* Recolor magnifying glass */
+     form > i {
+          color: white;
+          margin-top: .6rem;
+          margin-left: 0;
+     }
+     /* Adjust width of nav elements */
+     nav form {
+          width: 1%
+     }
+     nav ul {
+          width: 87%;
+     }
+     nav img {
+          width: 12%;
+     }
+     /* Hide last few elements */
+     nav > ul > li:nth-last-child(2) {
+          display: none;
+     }
+     nav > ul > li:nth-last-child(3) {
+          display: none;
+     }
+     nav > ul > li:nth-last-child(4) {
+          display: none;
+     }
+     nav > ul > li:nth-last-child(5) {
+          display: none;
+     }
+     nav > ul > li:nth-last-child(6) {
+          display: none;
+     }
+     /* Disable floats */
+     main > section {
+          width: 100%;
+          float: none;
+     }
+     /* Give margin between sections */
+     main > section:first-of-type {
+          margin-bottom: 1rem;
+     }
+     /* Increase height of additional news */
+     main > section:last-of-type > section {
+          height: 12rem;
+     }
+     /* Make titles bigger */
+     .highlight h3 {
+          font-size: 1.4rem;
+     }
+     /* Increase shadow */
+     .background {
+          box-shadow: inset 0px -70px 150px black;
+     }
+     /* Remove float in second */
+     main > section:last-child {
+          float: none;
+     }
+     main > section:last-child > section {
+          width: 100%;
+          height: 15rem;
+     }
+     main > section:last-child > section:last-child {
+          margin-top: .5rem;
+     }
+     /* Remove float in last section */
+     .news > section {
+          float: none;
+          width: 100%;
+     }
+     /* Remove background */
+     .biden, .women, .trump {
+          background: none;
+     }
+     .news .background, .news .text {
+          position: static;
+     }
+     .news > section {
+          height: auto;
+     }
+     /* Adjust spacings */
+     .news h2 {
+          margin-bottom: 1rem;
+     }
+     .news > section + section {
+          margin-left: 0%;
+          margin-top: 2rem;
+     }
+     /* Customize p */
+     .news p {
+          font-size: .8rem;
+          padding: 1% 0;
+     }
+     .news h2 {
+          margin-top: 2rem;
+     }
+}

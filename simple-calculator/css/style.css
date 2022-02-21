@@ -1,0 +1,94 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/* Prevent white space on the right side to appear when screensize is small */
+html, body {
+     width: 100%;
+     height: 100%;
+     margin: 0px;
+     padding: 0px;
+     overflow-x: hidden;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+body {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-items: center;
+}
+.inputs {
+     display: flex;
+     flex-direction: column;
+     gap: 2px;
+}
+
+/******************************************
+/* DESIGNS
+/*******************************************/
+
+.box {
+     border: 2px solid black;
+     border-radius: 5px;
+     padding: 20px;
+     text-align: center;
+}
+.resultBox {
+     text-align: center;
+}
+h1 {
+     font-size: 25px;
+}
+p {
+     font-size: 30px;
+}
+span {
+     font-weight: bold;
+}
+#setZero {
+     background: salmon;
+}
+#plusThree {
+     background: goldenrod;
+}
+#plusNine {
+     background: darkseagreen;
+}
+#minusTwo {
+     background: powderblue;
+}
+#timesTwo {
+     background: burlywood;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
