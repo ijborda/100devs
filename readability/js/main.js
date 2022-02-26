@@ -14,6 +14,13 @@ function readability(e) {
         msg.style.display = "block";
         setTimeout(() => msg.style.display = "none", 3000)
     }
+    // Check if text is too short 
+    else if (text.match(/[a-zA-Z]/g) === null) {
+        msg = document.querySelector("#msg")
+        msg.innerHTML = "Invalid text or text is too short."
+        msg.style.display = "block";
+        setTimeout(() => msg.style.display = "none", 3000)
+    }
     else {
         // Calculate readability score
         readabilityScore = calcReadability(text)
@@ -26,9 +33,19 @@ function readability(e) {
 
 function calcReadability(text) {
     console.log(text)
-    // Count number of letters, words, and sentences
+    // Count number of letters
     textLetters = text.match(/[a-zA-Z]/g).length
-    textWords = text.match(/\s/g).length + 1
+
+    // Count number of words
+    textWordsMatch = text.match(/\s/g)
+    if (textWordsMatch === null) {
+        textWords = 1
+    }
+    else {
+        textWords = text.match(/\s/g).length + 1
+    }
+
+    // Count number of sentences
     textSentenceMatch = text.match(/[!.?]/g)
     if (textSentenceMatch === null) {
         textSentence = 1
