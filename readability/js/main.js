@@ -6,7 +6,7 @@ function readability(e) {
     e.preventDefault()
     
     // Get text
-    text = document.querySelector("#text").value
+    text = document.querySelector("#text").value.trim()
     
     // Check text if empty 
     if (text === "") {
