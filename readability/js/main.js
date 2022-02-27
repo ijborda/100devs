@@ -1,10 +1,11 @@
 // Set listeners
 document.querySelector("#submit").addEventListener("click", readability)
+document.querySelector("#moreInfo").addEventListener("click", showMoreInfo)
 
 function readability(e) {
     // Prevent submission to server
     e.preventDefault()
-    
+
     // Get text
     text = document.querySelector("#text").value.trim()
     
@@ -26,6 +27,8 @@ function readability(e) {
         readabilityScore = calcReadability(text)
 
         // Show readability result
+        resultBox = document.querySelector("#resultBox")
+        resultBox.style.display = "contents"
         result = document.querySelector("#result")
         result.innerHTML = readabilityScore;
     }
@@ -69,4 +72,11 @@ function calcReadability(text) {
     else {
         return (`Grade ${index}`)
     }
+}
+
+function showMoreInfo() {
+    // Get node for moreInfo
+    moreInfo = document.querySelector("#moreInfoContent")
+    // Display it using toggle
+    moreInfo.classList.toggle("hidden");
 }

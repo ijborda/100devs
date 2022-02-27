@@ -69,6 +69,7 @@ h1 {
      text-align: center;
      font-size: 3rem;
      margin: 0;
+     color: rgb(74, 132, 242);
 }
 
 textarea {
@@ -78,9 +79,17 @@ textarea {
 }
 
 input {
-     width: 40%;
+     width: 100%;
      margin: 0 auto;
-     padding: .8rem 2rem;
+     padding: 1rem 2rem;
+     border: none;
+     color: white;
+     background: rgb(74, 132, 242);
+     font-size: 1.5rem;
+}
+
+input:hover, i:hover {
+     transform: translate(0px, 5px);
 }
 
 h2 {
@@ -90,6 +99,11 @@ h2 {
 #result {
      font-size: 2rem;
      font-weight: bold;
+     border: 2px solid  rgb(74, 132, 242);
+     width: 50%;
+     margin: 0 auto;
+     padding: 1rem;
+     color:  rgb(74, 132, 242);
 }
 
 ::placeholder {
@@ -108,6 +122,37 @@ h2 {
 #msg {
      display: none;
 }
+
+i {
+     font-size: 2rem;
+     color: rgb(74, 132, 242);
+     margin-bottom: 2rem;
+}
+#moreInfoContent section {
+     width: 80%;
+     margin: 0 auto;
+     margin-bottom: 2rem;
+}
+
+h3 {
+     margin: 0;
+     margin-bottom: .5rem;
+     font-size: 1.7rem;
+}
+
+p {
+     margin: 0;
+     line-height: 2rem;
+     font-size: 1.3rem;
+}
+.hidden {
+     display: none;
+}
+
+#resultBox {
+     display: none;
+}
+
 
 /******************************************
 /* ADDITIONAL STYLES
