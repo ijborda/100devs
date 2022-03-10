@@ -22,11 +22,11 @@ function convertToCamelCase(e) {
     let colnames = input.split("\n")
     
     // Clean input - trim and remove non-alpha or non-numeric characters
-    let cleanColnames = colnames.map((s) => s.trim().replace(/[^A-Za-z0-9 ]/g, "").replace(/\s+/g, " "))
+    let cleanColnames = colnames.map((s) => s.trim().replace(/[^A-Za-z0-9_ ]/g, "").replace(/\s+/g, " "))
 
     // Convert to camelcase
     let output = cleanColnames.map((colname) => {
-        return colname.split(" ").map((word) => {
+        return colname.split(/_|\s/).map((word) => {
             return (word[0].toUpperCase() + word.substring(1).toLowerCase())
         }).join("")
     })
