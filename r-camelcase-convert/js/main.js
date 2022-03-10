@@ -20,7 +20,10 @@ function convertToCamelCase(e) {
 
     // Store input into array
     let colnames = input.split("\n")
-    
+
+    // Remove empty elements
+    colnames = colnames.filter((colname => colname.length > 0))
+
     // Clean input - trim and remove non-alpha or non-numeric characters
     let cleanColnames = colnames.map((s) => s.trim().replace(/[^A-Za-z0-9_ ]/g, "").replace(/\s+/g, " "))
 
@@ -30,7 +33,6 @@ function convertToCamelCase(e) {
             return (word[0].toUpperCase() + word.substring(1).toLowerCase())
         }).join("")
     })
-    console.log(output)
 
     // Lowercase firstletter
     output = output.map((s) => {
@@ -53,7 +55,9 @@ function showColnames() {
     let input = inputEl.value
 
     // Calculate number of column names
-    let numColnames = input.split("\n").length
+    let numColnames = input.split("\n")
+    numColnames = numColnames.filter((colname => colname.length > 0))
+    numColnames = numColnames.length
     
     // Show output
     let numColnamesEl = document.querySelector("#numColnamesEl")

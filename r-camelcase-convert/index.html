@@ -35,8 +35,8 @@
 					<ol>
 						<li>Enter column names in the box above. Each line corresponds to one column name.</li>
 						<li>The number of column names entered so far is shown below the box.</li>
-						<li>Click "Submit" to convert the column names to R ready vector using camelCase.</li>
-						<li>Click "Copy Text" to copy the output to your clipbord.</li>
+						<li>Click "Submit" to convert the column names to R ready vector formatted in camelCase.</li>
+						<li>Click "Copy Text" to copy the output to your clipboard.</li>
 					</ol>
 					<h2>How does it work?</h2>
 					<ol>
@@ -45,8 +45,19 @@
 						<li>The first character of every word (except the first word) is set to uppercase, all other characters are set to lowercase.</li>
 						<li>It assumes that words are separated by either space or underscore.</li>
 						<li>All white spaces are then removed.</li>
-						<li>Finally, the output is formatted to be R-ready by formatting it to "c("colname1", "colname2", ...)".</li>
+						<li>Finally, the output is formatted to be R-ready by formatting it to "c("colname1", "colname2", "colname3", ...)".</li>
 					</ol>
+					<h2>Example:</h2>
+					<div class="example">
+						<div>
+							<p class="exampleTitle">Input Text:</p>
+							<p class="inputText example"> First Name<br>Last NAME<br>"Nationality"<br>Age<br>Date_of_Birth<br>GEndER</p>
+						</div>
+						<div>
+							<p class="exampleTitle">Output Text:</p>
+							<p class="outputText example">c("firstName", "lastName", "nationality", "age", "dateOfBirth", "gender")</p>
+						</div>
+					</div>
 				</section>
 			</div>
 		</div>
