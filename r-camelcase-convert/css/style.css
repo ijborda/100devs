@@ -36,6 +36,10 @@ html {
 /* BASE STYLES
 /*******************************************/
 
+html {
+     background: rgb(41, 43, 54);
+     color: white;
+}
 h1 {
      font-size: 2.5rem;
 }
@@ -48,8 +52,6 @@ li {
 #outputEl {
      font-size: 1.2rem;
 }
-
-
 
 /******************************************
 /* LAYOUT
@@ -87,10 +89,8 @@ input {
 }
 .output:hover {
      background: #eee;
+     color: black;
      cursor: pointer;
-}
-.output:focus {
-     background: red;
 }
 /* Instruction style */
 ol {
@@ -115,11 +115,13 @@ ol {
      text-align: start;
      background: #eee;
      padding: 10px;
+     color: black;
 }
 .outputText {
      text-align: center;
      background: #eee;
      padding: 10px;
+     color: black;
 }
 
 /******************************************
