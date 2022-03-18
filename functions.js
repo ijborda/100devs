@@ -40,3 +40,14 @@ function shuffle(array) {
     }
   }
   
+// Get frequency table from array, return object
+function getFreqTable(data) {
+   return data.reduce( (freq, current) => {
+        if (current in freq) {
+          freq[current] += 1
+        } else {
+          freq[current] = 1
+        }
+        return freq
+      }, {})
+}
