@@ -1,0 +1,3 @@
+// Use strict
+"use strict";
+
