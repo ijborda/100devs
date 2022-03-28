@@ -120,6 +120,7 @@ function deepEqual(x, y) {
         })
         return isKeyEqual && isValEqual
     } else {
+        // Compare directly if both are not object types
         return x === y  
     }
 }
