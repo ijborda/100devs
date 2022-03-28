@@ -1,0 +1,70 @@
+/* Set default font style */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(170, 170, 170);
+    font-size: 1.3rem
+}
+
+/* Hide ids in table */
+.hidden {
+    display: none;
+}
+
+/* Give green background to some buttons */
+.green-bg {
+    background: rgb(96, 178, 88);
+    color: white;
+}
+
+/* Adjust padding of add button */
+.add {
+    padding: .4rem 2.8rem;
+}
+
+/* Give gray background to edit/del buttons */
+.gray-bg {
+    background: rgb(194, 193, 194);
+    color: white;
+}
+
+/* Push button to right side */
+.button-container {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+/* Make table font size smaller */
+table {
+    font-size: 75%;
+}
+
+/* Make table buttons smaller */
+.edit, .del {
+    font-size: .8rem;
+    padding: .2rem 1rem;
+}
+
+/* Customize colors, spacing, and borders in table */
+.table td {
+    vertical-align: middle;
+}
+.table-custom th {
+    color: rgb(95, 95, 95);
+    text-align: center;
+    font-weight: bold;
+    padding: 1.5rem 0;
+}
+.table-custom td {
+    padding: 2rem;
+}
+.table-custom td, .table-custom th {
+    border-top: none;
+    border-right: 1px solid #dee2e6;
+    border-left: 1px solid #dee2e6;
+}
+.table-custom tr:last-of-type {
+    border-bottom: 1px solid #dee2e6;
+}
+.table-custom tr:first-of-type {
+    border-top: 1px solid #dee2e6;
+}
