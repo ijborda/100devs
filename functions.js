@@ -51,3 +51,27 @@ function getFreqTable(data) {
         return freq
       }, {})
 }
+
+// Linked list class
+function Node(data, next = null) {
+  this.data = data;
+  this.next = next;
+}
+
+// Linked list to array
+function listToArray(list) {
+  return list ? [list.data, ...toArr(list.next)] : []
+}
+
+// Array to linked list
+function arrayToList(array) {
+  if (!array) return null;
+  var head = new Node(array[0]);
+  var prev = head;
+  for (var i = 1; i < array.length; i++) {
+    var curr = new Node(array[i]);
+    prev.next = curr;
+    prev = curr;
+  }
+  return head;
+}
