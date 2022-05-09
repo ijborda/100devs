@@ -13,21 +13,23 @@ function checkCashRegister(price, cash, cid) {
         'NICKEL':       0.05,
         'PENNY':        0.01,
     }
-    let drawerVal = total(cid)
+    let drawer = getTotal(cid)
     let changeDue = cash - price
 
-    if (drawerVal < changeDue) {
+    if (drawer < changeDue) {
         return {
             'status': 'INSUFFICIENT_FUNDS', 
             'change': []};
-    } else if (drawerVal === changeDue) {
+    } else if (drawer === changeDue) {
         return {
             'status': 'CLOSED', 
             'change': cid};   
     } else {
         let change = [["PENNY", 0], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]
-        while (total(cid) > 0 && changeDue > 0) {
-            let coinChange = singleChange(changeDue, cid)
+        while (getTotal(cid) > 0 && changeDue > 0) {
+            // Determine coin to give as change
+            let coinChange = getChange(changeDue, cid)
+            // Update changedue, cid, and change
             changeDue -= currency[coinChange]
             cid.forEach((coin, i) => {
                 if (coin[0] === coinChange && coin[1] !== 0) {
@@ -37,7 +39,7 @@ function checkCashRegister(price, cash, cid) {
             })
         }
         change = change.filter(a => a[1] !== 0).reverse()
-        if (cash - price === +total(change).toFixed(2)) {
+        if (cash - price === +getTotal(change).toFixed(2)) {
             return {
                 'status': 'OPEN', 
                 'change': change}; 
@@ -49,11 +51,11 @@ function checkCashRegister(price, cash, cid) {
     }
 }
 
-function total(arr) {
+function getTotal(arr) {
     return arr.reduce((sum, [_, val]) => sum + val, 0)
 }
 
-function singleChange(val, cid) {
+function getChange(val, cid) {
     let currency = {
         'ONE HUNDRED':  100,
         'TWENTY':       20,
