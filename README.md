@@ -1,6 +1,6 @@
 # 100Devs
 
-Repository of small projects from 100Devs. 
+Repository of mini projects from 100Devs. 
 
 What is 100Devs? Check us out [here](https://leonnoel.com/blog/100devs/).
 
@@ -16,7 +16,7 @@ You can also visit the list of projects [here](https://imarijoyborda.com/100devs
 The list is fairly simple for now, but I plan to improve it soon!
 
 ## How It's Made
-Tech used: HTML, CSS, Bootstrap, and JavaScript.
+Tech used: HTML, CSS, Bootstrap, and JavaScript. <a href="https://www.flaticon.com/free-icons/code" title="code icons">Code icons created by Royyan Wijaya - Flaticon</a>
 
 ## Thanks for checking it out!
 Check out my other projects:
